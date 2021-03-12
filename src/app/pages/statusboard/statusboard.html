@@ -1,0 +1,62 @@
+
+<div class=" content">
+  <div class=" row">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card welcome-text">
+            <h2>Status Board <span class="text-warning font-weight-normal font-smaller">| <a routerLink="/view-product" class="text-warning">Add More</a></span></h2>
+            <p>List of items you have received for  New Cards. Please do needfull
+              or click add more items to add items.<p>
+            </p>
+          </div>
+        </div>
+      <div class="col-md-4 text-right"><div class="welcome-image float-right"><img src="./assets/img/welcome-img.png" /></div></div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="filter-wrap">
+      <h3>Select Card Operation Filter</h3>
+      <form action="" class="form-inline">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Card Number">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Start Date">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="End Date">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="End Date">
+        </div>
+        <div class="form-group">
+          <select class="form-select form-control" aria-label="Default select example">
+            <option selected>Requested by</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-warning">Confirm identity</button>
+        </div>
+        <!-- <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>   -->
+      </form>
+    </div>
+  </div>
+  <div class=" col-md-12">
+    <div class=" card">
+      <div class=" card-body p-0">
+        <ag-grid-angular
+  style="width: 100%; height: 500px;"
+  class="ag-theme-alpine"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+>
+</ag-grid-angular>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

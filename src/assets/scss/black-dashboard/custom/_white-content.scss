@@ -1,0 +1,495 @@
+.white-content{
+  background: $light-bg;
+
+  .navbar.navbar-transparent .navbar-brand{
+    color: $black-states;
+  }
+
+  .navbar.navbar-transparent .navbar-toggler-bar{
+    background: $black-states;
+  }
+  .navbar.navbar-transparent .navbar-nav li a:not(.dropdown-item){
+      color: $black-states;
+      & i{
+        // color: $black-states;
+      }
+  }
+
+  .navbar.navbar-transparent .navbar-minimize button i{
+    color: $black-states;
+  }
+
+  .navbar.navbar-transparent .search-bar.input-group i{
+    color: $black-states;
+  }
+  .navbar.navbar-transparent .search-bar.input-group .form-control{
+    color: $default;
+    &::placeholder{
+      color: $dark-gray;
+    }
+  }
+
+  .sidebar{
+    // box-shadow: 0 2px 22px 0 rgba(0,0,0,.1), 0 4px 20px 0 rgba(0,0,0,.15);
+    p{
+      color: $white;
+    }
+  }
+
+  .main-panel{
+    background: $light-bg;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ol li, ul li, pre {
+    color: $black-states;
+  }
+  a {
+    @extend .primary-text;
+  }
+  .font-icon-detail i{
+    color: $black;
+  }
+
+  .btn:not([data-action]):hover{
+    box-shadow:  0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  }
+
+  .btn-neutral.btn-link{
+    color: rgba($black, 0.7);
+  }
+
+  //style for inputs
+
+  @include form-control-placeholder(rgba($black,0.4), 1);
+    .has-danger{
+      .form-control, .input-group-prepend .input-group-text{
+        border-color: $danger-states;
+      }
+    }
+
+    .input-group-prepend .input-group-text{
+      border-color: rgba($black-states,0.5);
+      color: $black-states;
+    }
+
+    .form-control{
+      color: $black;
+      border-color: rgba($black-states,0.5);
+      &:focus{
+        border-color: $primary;
+      }
+    }
+
+  .form-group.no-border,
+  .input-group.no-border{
+      .form-control,
+      .form-control + .input-group-prepend .input-group-text,
+      .form-control + .input-group-append .input-group-text,
+      .input-group-prepend .input-group-text,
+      .input-group-append .input-group-text{
+          background-color: $opacity-gray-3;
+          &:focus,
+          &:active,
+          &:active{
+              background-color: $opacity-gray-5;
+          }
+      }
+
+      .form-control{
+          &:focus{
+              & + .input-group-prepend .input-group-text,
+              & + .input-group-append .input-group-text{
+
+                  background-color: $transparent-bg;
+              }
+          }
+      }
+
+
+  }
+
+  .input-group[disabled]{
+      .input-group-prepend .input-group-text,
+      .input-group-append .input-group-text{
+          background-color: $black;
+      }
+  }
+
+  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    background: $light-gray;
+    border-color: rgba($black-states,0.3);
+  }
+
+  .input-group-focus{
+      .input-group-prepend .input-group-text,
+      .input-group-append .input-group-text,
+      .form-control{
+        border-color: $primary;
+      }
+
+      &.no-border{
+          .input-group-prepend .input-group-text,
+          .input-group-append .input-group-text{
+
+              background-color: $opacity-gray-5;
+          }
+      }
+  }
+  .input-group-prepend .input-group-text {
+      border-right: none;
+  }
+
+  .input-group-append .input-group-text {
+      border-left: none;
+  }
+
+  .has-danger .form-control:focus, .has-success.input-group-focus .input-group-append .input-group-text, .has-success.input-group-focus .input-group-prepend .input-group-text {
+    border-color: $danger-states;
+  }
+
+  .has-success .form-control:focus, .has-success.input-group-focus .input-group-append .input-group-text, .has-success.input-group-focus .input-group-prepend .input-group-text {
+    border-color: darken($success, 10%);
+  }
+
+  .btn.btn-link{
+    &:hover,&:active, &:focus{
+      color: $dark-gray !important;
+    }
+  }
+
+  .btn-group .btn.active{
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  }
+
+  .card:not(.card-white){
+    background: $white;
+    box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
+    .card-header{
+      color: $black;
+      a[data-toggle="collapse"]{
+        color: $black;
+      }
+    }
+    .card-header .card-title, .card-body .card-title{
+      color: $black-states;
+    }
+
+    .card-body{
+      .card-category, .card-description{
+        color: $black-states;
+      }
+    }
+
+
+    label:not(.btn){
+      color: $black-states;
+      font-weight: $font-weight-bold;
+    }
+
+
+     &.nav-pills .nav-item .nav-link {
+        color: $nav-gray;
+        background-color: hsla(0,0%,87%,.3);
+        &:not(.active):hover{
+          background: hsla(0,0%,87%,.5);
+        }
+        &.active{
+          color: $white;
+
+        }
+    }
+
+    .tab-content .tab-pane {
+        color: $nav-gray;
+    }
+
+
+    .card{
+      box-shadow: none;
+    }
+
+    &.card-plain{
+      background: $transparent-bg;
+      box-shadow: none;
+    }
+
+    &.card-tasks{
+      .card-body{
+        i{
+          color: rgba(34,42,66,0.7);
+          &:hover{
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .table{
+
+      > tbody > tr > td {
+        color: $black-states!important;
+
+    }
+
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th,
+    > thead > tr > td,
+    > tbody > tr > td,
+    > tfoot > tr > td{
+        border-color: rgba($black, 0.2);
+        padding: 12px 7px;
+        vertical-align: middle;
+        .action-icon {
+          display: flex;
+          flex-wrap: nowrap;
+          a {
+            width: 100%;
+          }
+        }
+    }
+
+    > thead > tr > th, button.btn-neutral.btn-link{
+      color:$black-states
+    }
+  }
+
+  .footer ul li a{
+    color: $black-states;
+  }
+
+  .footer .copyright{
+    color: $black-states;
+  }
+
+  .progress-container, .progress-container.progress.sm{
+      .progress{
+        background: rgba($black,0.1);
+        box-shadow: 0 0 0 3px rgba($black,0.1);
+        .progress-value{
+          color: $default;
+        }
+      }
+
+      .progress-badge{
+        color: $black-states;
+      }
+  }
+
+   .full-page{
+     background: $light-bg;
+
+     h1, h2, h3, h4, h5, h6, p, ol li, ul li, pre {
+       color: $black-states;
+     }
+
+     .description{
+       color: $dark-gray;
+     }
+
+     .footer ul li a{
+       color: $black-states;
+     }
+
+     .footer .copyright{
+       color: $black-states;
+     }
+   }
+
+   .nav-pills .nav-item .nav-link:not(.active){
+     background: darken($light-bg,10%);
+     color: $black-states;
+     &:hover{
+       background: darken($white,20%);
+
+     }
+   }
+}
+// Welcome Section Css Start
+.primary-text {
+  color: $danger;
+}
+.welcome-text {
+  background-color: $white;
+  padding: 1rem;
+  h2 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-extra-bold;
+    margin-bottom: 10px;
+    color: $black-states;
+  }
+  p {
+    margin-bottom: 0;
+    color: $black-states;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+  }
+}
+.welcome-image {
+  width: 145px;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+.card-list {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 13px 10px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  div {
+    // width: 100%;
+  }
+  .avatar {
+    display: block;
+    margin: 0 10px 0 0 !important;
+    img {
+
+    }
+  }
+  .card-detail {
+    width: 100%;
+    display: flex;
+    color: $black-states;
+    .card-name {
+      display: inline-block;
+      width: 50%;
+      p {
+        margin-bottom: 0;
+        font-size: $font-size-sm;
+        color: $black-states;
+        font-weight: $font-weight-bold;
+      }
+    }
+    .progress-wrapper {
+      display: flex;
+      width: 50%;
+      padding: 10px 0 0 15px;
+      .progress {
+        box-shadow: none;
+        background-color: rgb(202 202 202 / 30%);
+        width: 100%;
+        height: 0.3rem;
+        .progress-bar {
+
+        }
+      }
+      .progress-percentage {
+        // float: right;
+        height: 1.3rem;
+        line-height: normal;
+        margin-top: -8px;
+        margin-left: 10px;
+      }
+    }
+
+  }
+}
+.cta-btn {
+  .btn {
+    color: $white;
+    margin: 15px 5px 0 5px;
+    letter-spacing: 0.5px;
+    font-weight: $font-weight-bold;
+    &:first-child {
+      margin-left: 0;
+    }
+    i {
+      font-size: $font-size-xs;
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+app-sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  .log {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 15px;
+    width: 100%;
+    border-top: 1px solid #2d2d3c;
+    z-index: 9;
+    a {
+      color: $white;
+      i {
+        margin-right: 5px;
+      }
+    }
+
+  }
+}
+.left-nav {
+  li {
+    a {
+      border: 1px solid $dark-gray;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-size: $font-size-sm;
+      padding: 4px 15px;
+      i {
+        font-size: $font-size-sm;
+        margin-right: 5px;
+      }
+      &.active, &:hover {
+        color: $warning !important;
+        border-color: $warning !important;
+      }
+    }
+    &:first-child {
+      a {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.card-footer {
+  .btn{
+    padding: 8px 25px;
+    border-radius: 5px;
+    margin: 0 5px;
+    &.btn-outline-warning {
+      border: 1px solid $orange;
+      color: $orange;
+      background-color: transparent;
+    }
+    i {
+      font-size: $font-size-xs;
+    }
+  }
+
+}
+.grid-action {
+  color: $danger !important;
+  padding: 5px 7px;
+}
+.ag-header-cell-menu-button {
+  &:not(.ag-header-menu-always-show) {
+    opacity: 1;
+  }
+}
+.ag-theme-alpine{
+  font-family: 'Mulish', sans-serif;
+  .ag-header {
+    border:none;
+  }
+  .ag-root-wrapper {
+    border: none;
+  }
+}
+.filter-wrap {
+  h3 {
+    font-size: $font-size-lg;
+    color: $black-states;
+    margin-bottom: 10px;
+  }
+}
