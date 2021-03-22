@@ -10,6 +10,7 @@ import { ViewCustomerComponent } from "src/app/pages/customer/view-customer.comp
 import { AddNewproductComponent } from "src/app/pages/newproduct/add-newproduct.component";
 import { ViewProductComponent } from "src/app/pages/newproduct/view-product.component";
 import { StatusBoardComponent } from "src/app/pages/statusboard/statusboard.component";
+import { AddStatusComponent } from "src/app/pages/statusboard/add-status.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
@@ -19,6 +20,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "add-newproduct", component: AddNewproductComponent},
   { path: "view-product", component: ViewProductComponent},
   { path: "statusboard", component: StatusBoardComponent},  
+  { path: "add-status", component: AddStatusComponent},  
   { path: "maps", component: MapComponent },
   { path: "notifications", component: NotificationsComponent },
   { path: "listitem", component: ListitemComponent },

@@ -18,12 +18,16 @@
       <div class=" card">
         <div class=" card-body p-0">
           <ag-grid-angular
-    style="width: 100%; height: 500px;"
-    class="ag-theme-alpine"
-    [rowData]="rowData"
-    [columnDefs]="columnDefs"
->
-</ag-grid-angular>
+        style="width: 100%; height: 500px;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [animateRows]="true"
+        [pagination]="true"
+        [sortingOrder]="sortingOrder"
+        (gridReady)="$event.api.sizeColumnsToFit()"
+    >
+    </ag-grid-angular>
         </div>
       </div>
     </div>

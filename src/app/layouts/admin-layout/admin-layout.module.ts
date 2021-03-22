@@ -11,13 +11,13 @@ import { NotificationsComponent } from "../../pages/notifications/notifications.
 import { TablesComponent } from "../../pages/tables/tables.component";
 import { TypographyComponent } from "../../pages/typography/typography.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
-
-import { NgbDatepickerModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ListitemComponent } from "src/app/pages/listitem/listitem.component";
 import { ViewCustomerComponent } from "src/app/pages/customer/view-customer.component";
 import { AgGridModule } from 'ag-grid-angular';
 import { AddNewproductComponent } from "src/app/pages/newproduct/add-newproduct.component";
 import { ViewProductComponent } from "src/app/pages/newproduct/view-product.component";
+import { StatusBoardComponent } from "src/app/pages/statusboard/statusboard.component";
+import { AddStatusComponent } from "src/app/pages/statusboard/add-status.component";
 
 @NgModule({
   imports: [
@@ -25,7 +25,6 @@ import { ViewProductComponent } from "src/app/pages/newproduct/view-product.comp
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     HttpClientModule,
-    NgbModule,
     AgGridModule.withComponents([])
   ],
   declarations: [
@@ -38,8 +37,11 @@ import { ViewProductComponent } from "src/app/pages/newproduct/view-product.comp
     NotificationsComponent,
     MapComponent,
     AddNewproductComponent,
-    ViewProductComponent
-    // RtlComponent
+    ViewProductComponent,
+    StatusBoardComponent,
+    AddStatusComponent,
+    AddCustomerComponent
+        // RtlComponent
   ]
 })
 export class AdminLayoutModule {}

@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-8">
           <div class="card welcome-text">
-            <h2>Status Board <span class="text-warning font-weight-normal font-smaller">| <a routerLink="/view-product" class="text-warning">Add More</a></span></h2>
+            <h2>Status Board <span class="text-warning font-weight-normal font-smaller">| <a routerLink="/add-status" class="text-warning">Add More</a></span></h2>
             <p>List of items you have received for  New Cards. Please do needfull
               or click add more items to add items.<p>
             </p>
@@ -38,7 +38,7 @@
             <option value="3">Three</option>
           </select>
         </div>
-        <div class="col-auto">
+        <div class="form-group">
           <button type="submit" class="btn btn-warning">Confirm identity</button>
         </div>
         <!-- <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>   -->
@@ -49,12 +49,16 @@
     <div class=" card">
       <div class=" card-body p-0">
         <ag-grid-angular
-  style="width: 100%; height: 500px;"
-  class="ag-theme-alpine"
-  [rowData]="rowData"
-  [columnDefs]="columnDefs"
->
-</ag-grid-angular>
+        style="width: 100%; height: 500px;"
+        class="ag-theme-alpine"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [animateRows]="true"
+        [pagination]="true"
+        [sortingOrder]="sortingOrder"
+        (gridReady)="$event.api.sizeColumnsToFit()"
+    >
+    </ag-grid-angular>
       </div>
     </div>
   </div>

@@ -131,3 +131,8 @@
     color: $danger-states;
   }
 }
+.form-group { 
+  &[class*="col-"] {
+    padding: 0 35px;  
+  }   
+}

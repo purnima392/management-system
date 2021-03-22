@@ -1,48 +1,52 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "statusboard",
+  selector: "statusboard1",
   templateUrl: "statusboard.html"
 })
 export class StatusBoardComponent implements OnInit {
-  constructor() {}
-ngOnInit() {}
-columnDefs = [
-  { headerName: "Name", field: 'name', sortable: true, filter: true, checkboxSelection: true },
-  { headerName: "Currency Type", field: 'currencytype', sortable: true, filter: true},
-  { headerName: "Insurance Charge", field: 'icharge', sortable: true, filter: true},
-  { headerName: "Renewal Charge", field: 'rcharge', sortable: true, filter: true},
-  { headerName: "Block Charge", field: 'bcharge', sortable: true, filter: true},
-  { headerName: "Un-Block Charge", field: 'ubcharge', sortable: true, filter: true},
-  { headerName: "Re-PIN Charge", field: 'recharge', sortable: true, filter: true},
-  { headerName: "Description", field: 'description', sortable: true, filter: true},
-  { headerName: "Action", field: 'action', cellRenderer: this.CustomerActionRender, sortable: true, filter: true,}
-];
+  constructor() { }
+  ngOnInit() { }
+  columnDefs = [
+    { headerName: "Account", width: 200, field: 'account', sortable: true, filter: true, checkboxSelection: true },
+    { headerName: "Card Number", width: 200, field: 'cardnumber', sortable: true, filter: true },
+    { headerName: "Status", width: 200, field: 'status', cellRenderer: this.StatusAction, sortable: true, filter: true },
+    { headerName: "Date", width: 200, field: 'date', sortable: true, filter: true },
+    { headerName: "Action", width: 200, field: 'action', cellRenderer: this.CustomerActionRender, sortable: true, filter: true, }
+  ];
 
-rowData = [
-  { name: 'Manoj Adhikari', currencytype: 'USD', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'EUR', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'FJD', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'FKP', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'GBP', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'AED', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'CAD', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'CLP', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'INR', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'IQD', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''},
-  { name: 'Manoj Adhikari', currencytype: 'KGS', icharge: '100', rcharge: '100', bcharge:'50', ubcharge: '56', recharge:'60', description: ''}
-];
-public CustomerActionRender(params) {
-let templateHtml = "";
-templateHtml += `<a href="#" class="grid-action">
-            <i class="far fa-edit"></i>
-         </a>
+  rowData = [
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+    { account: '13216665321366', cardnumber: '565465465465436', date: 'jan 20, 2020 at 10:00 AM' },
+
+  ];  
+  public CustomerActionRender(params) {
+    let templateHtml = "";
+    templateHtml += `
          <a href="#" class="grid-action">
              <i class="fas fa-eye"></i>
          </a>
-         <a href="#" class="grid-action">
-                        <i class="far fa-trash-alt"></i>
+         <a href="#" class="grid-action" style="text-decoration: underline;">
+            Re-Request
            </a>`;
-return templateHtml;
-}
+    return templateHtml;
+  }
+  public StatusAction(params) {
+    let templateHtml1 = "";
+    templateHtml1 += `        
+        <div class="status">
+        <i class="circle"></i> Active
+        </div>
+       `;
+    return templateHtml1;
+  }
 }

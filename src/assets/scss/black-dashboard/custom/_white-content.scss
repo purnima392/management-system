@@ -492,4 +492,38 @@ app-sidebar {
     color: $black-states;
     margin-bottom: 10px;
   }
+  .form-inline {
+    flex-wrap: nowrap;
+    .form-group {
+      width: 100%;
+      flex: 1 0 0;
+      margin-bottom: 15px;
+      .form-control {
+        width: 95%;
+        padding: 5px 15px;
+        background-color: #ffffff;
+        border-radius: 0.2rem;
+      }
+     .btn {
+        width: 95%;
+      }
+    }
+  }
+}
+.status {
+  i {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(4, 116, 32);
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
+.ag-header-cell-text {
+  font-size: $font-size-xs;
+}
+.ag-cell-value, .ag-group-value {
+  @extend .ag-header-cell-text;
 }
